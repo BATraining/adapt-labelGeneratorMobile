@@ -1,0 +1,228 @@
+/*
+ * adapt-labelGeneratorMobile
+ * Copyright (C) 2015 Bombardier Inc. (www.batraining.com)
+ * https://github.com/BATraining/adapt-labelGeneratorMobile/blob/master/LICENSE
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+.labelGeneratorMobile-component {
+
+  &.desktop {
+    .labelGeneratorMobile-slide-container {
+      float: left;
+      .dir-rtl & {
+        float: right;
+      }
+      margin-right: 3%;
+      .dir-rtl & {
+        margin-right: inherit;
+        margin-left: 3%;
+      }
+      width: 60%;
+    }
+    .labelGeneratorMobile-slider-graphic {
+      margin-right: 0;
+      width:60%;
+    }
+    .labelGeneratorMobile-strapline {
+      display:none;
+    }
+  }
+
+  .labelGeneratorMobile-content {
+    float: right;
+    .dir-rtl & {
+      float: left;
+    }
+    width: 36%;
+    background: @inverted-background-color;
+    color: @inverted-foreground-color;
+  }
+
+  .labelGeneratorMobile-content-inner {
+    padding:20px;
+  }
+
+  &.mobile {
+    .labelGeneratorMobile-content {
+      display:none;
+    }
+  }
+
+  .labelGeneratorMobile-slide-container {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    float: left;
+    .dir-rtl & {
+      float: right;
+    }
+  }
+
+  .labelGeneratorMobile-slider-graphic {
+    float: left;
+    .dir-rtl & {
+      float: right;
+    }
+    position: relative;
+  }
+
+  .labelGeneratorMobile-item-title {
+    position:relative;
+    display:block;
+  }
+
+  .labelGeneratorMobile-indicators {
+    text-align: center;
+  }
+
+  .labelGeneratorMobile-progress {
+    width: (@icon-size/3);
+    height: (@icon-size/3);
+    display: inline-block;
+    background-color: @item-color;
+    border:1px solid @foreground-color;
+    & when (@item-border-width = 1px) {
+      border: @item-border;
+    }
+    border-radius: 50%;
+    margin: 1px;
+    &.selected {
+      background-color: @item-text-color;
+    }
+  }
+
+  .labelGeneratorMobile-controls {
+    display: block;
+    width: (@icon-size*2);
+    height: (@icon-size*2);
+    position: absolute;
+    top: 50%;
+    margin-top: -(@icon-size*2);
+    z-index: 10;
+    text-decoration: none;
+    background-color:@button-color;
+    &:hover {
+      background-color:@button-hover-color;
+      .icon {
+        color:@button-text-hover-color;
+      }
+    }
+    .icon {
+      margin: (@icon-size/2);
+      color:@button-text-color;
+    }
+  }
+
+  .labelGeneratorMobile-control-left {
+    left: 0;
+    .dir-rtl & {
+      left: inherit;
+      right: 0;
+    }
+  }
+
+  .labelGeneratorMobile-control-right {
+    right: 0;
+    .dir-rtl & {
+      right: inherit;
+      left: 0;
+    }
+  }
+
+  .labelGeneratorMobile-strapline {
+    height: auto;
+    position: relative;
+  }
+
+  .labelGeneratorMobile-strapline-header {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .labelGeneratorMobile-strapline-header-inner {
+    position:relative;
+  }
+  .labelGeneratorMobile-strapline-title {
+    position: relative;
+    float: left;
+    text-decoration: none;
+    background-color: @button-color;
+    color: @button-text-color;
+    cursor: default;
+    .dir-rtl & {
+      float: right;
+    }
+    &.addHover{
+      &:hover {
+        background-color: @button-hover-color;
+        color: @button-text-hover-color;
+        .icon {
+          color: @button-text-hover-color;
+        }
+      }
+      cursor:pointer;
+    }
+
+    .icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      color: @button-text-color;
+    }
+
+  }
+
+  .labelGeneratorMobile-strapline-title-inner {
+    height: (@item-padding-top + @item-padding-bottom + @icon-size);
+    line-height: (@item-padding-top + @item-padding-bottom + @icon-size);
+    padding-left: (@icon-size/2);
+    padding-right: (@item-padding-left + @item-padding-right + @icon-size);
+    .dir-rtl & {
+      padding-right: (@icon-size/2);
+      padding-left: (@item-padding-left + @item-padding-right + @icon-size);
+    }
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .labelGeneratorMobile-popup-open {
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    .dir-rtl & {
+      right:inherit;
+      left:0;
+    }
+    text-decoration: none;
+    z-index: 5;
+    background-color: @inverted-background-color;
+    padding: @item-padding;
+    .icon {
+      color: @inverted-foreground-color;
+      &:hover {
+        color: lighten(@inverted-background-color, 30%);
+      }
+    }
+  }
+
+  .labelGeneratorMobile-hidden {
+    display:none;
+  }
+
+}

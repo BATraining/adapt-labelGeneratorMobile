@@ -1,0 +1,86 @@
+{{!--
+    adapt-labelGeneratorMobile
+    Copyright (C) 2015 Bombardier Inc. (www.batraining.com)
+    https://github.com/BATraining/adapt-labelGeneratorMobile/blob/master/LICENSE
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--}}
+<div class="labelGeneratorMobile-inner component-inner">
+    {{> component this}}
+    <div class="labelGeneratorMobile-widget component-widget">
+
+        <div class="labelGeneratorMobile-content">
+            <div class="labelGeneratorMobile-content-inner">
+                {{#each _items}}
+                    <div class="labelGeneratorMobile-content-item">
+                        <div class="labelGeneratorMobile-content-title">
+                            <div class="labelGeneratorMobile-content-title-inner accessible-text-block h5" role="heading">
+                                {{{title}}}
+                            </div>
+                        </div>
+                        <div class="labelGeneratorMobile-content-body">
+                            <div class="labelGeneratorMobile-content-body-inner">
+                                {{{body}}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="labelGeneratorMobile-strapline">
+            <div class="labelGeneratorMobile-strapline-header">
+                <div class="labelGeneratorMobile-strapline-header-inner">
+                    <div></div>
+                    {{#each _items}}
+                        <a href="#" role="button" class="labelGeneratorMobile-strapline-title labelGeneratorMobile-strapline-{{@index}}">
+                            <div class="labelGeneratorMobile-strapline-title-inner accessible-text-block h5">
+                                {{{strapline}}}
+                            </div>
+                            {{#if _hasExtraDescription}}
+                                <div class="icon icon-plus"></div>
+                            {{else}}
+                                <div class="noDescription"></div>
+                            {{/if}}
+                        </a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="labelGeneratorMobile-slide-container">
+
+            <a href="#" class="labelGeneratorMobile-controls labelGeneratorMobile-control-left" role="button">
+                <div class="icon icon-controls-left"></div>
+            </a>
+            <a href="#" class="labelGeneratorMobile-controls labelGeneratorMobile-control-right" role="button">
+                <div class="icon icon-controls-right"></div>
+            </a>
+
+            <div class="labelGeneratorMobile-slider">
+                {{#each _items}}
+                    <div class="labelGeneratorMobile-slider-graphic labelGeneratorMobile-slider-{{@index}} {{#if visited}}visited{{/if}}">
+                        <img src="{{_graphic.src}}" alt="{{_graphic.alt}}"/>
+                    </div>
+                {{/each}}
+            </div>
+            <div class="labelGeneratorMobile-indicators">
+                {{#each _items}}
+                    <div class="labelGeneratorMobile-progress labelGeneratorMobile-progress-{{@index}} component-item-color component-item-border"></div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+</div>

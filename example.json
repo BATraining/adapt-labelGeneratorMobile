@@ -1,0 +1,101 @@
+{
+    "_id":"c-153",
+    "_parentId":"b-53",
+    "_type":"component",
+    "_component":"labelGeneratorMobile",
+    "_classes":"",
+    "_layout":"full",
+    "title": "Label Generator Mobile",
+    "displayTitle": "Label Generator Mobile",
+    "body": "This is optional body text. Select the label on the image to reveal the text. ",
+    "instruction":"",
+    "_isHighlightEnable":false,
+    "_graphic": {
+        "src": "course/en/images/CS1_CS3_4911_003.jpg",
+        "alt": "alt text"
+    },
+    "_items":[
+
+        {
+            "id":1,
+            "title": "in on the you jpg png",
+            "body": "Single components are interactions that enable two",
+            "_graphic": {
+                "src": "course/en/images/labelGenerator_CS1_CS3_4911_003/narrative_1.png",
+                "alt": "Label generator pop-up pin. Select here to open."
+            },
+            "strapline": "Engine Mount 1234567",
+            "_hasExtraDescription":false,
+            "_similarItemIdForPopup":0,
+            "_itemTop": 10,
+            "_itemLeft": 40,
+            "_popupPosition":"right",
+            "_highlightTop":1,
+            "_highlightLeft":1,
+            "_highlightWidth":20,
+            "_highlightHeight":30
+        },
+        {
+            "id":2,
+            "title": "APU",
+            "body": "These take up half of a blocks width.",
+            "_graphic": {
+                "src": "course/en/images/labelGenerator_CS1_CS3_4911_003/narrative_2.png",
+                "alt": "Label generator pop-up pin. Select here to open."
+            },
+            "strapline": "APU",
+            "_hasExtraDescription":true,
+            "_similarItemIdForPopup":0,
+            "_itemTop": 28,
+            "_itemLeft": 77,
+            "_popupPosition":"left",
+            "_highlightTop":2,
+            "_highlightLeft":3,
+            "_highlightWidth":7,
+            "_highlightHeight":6
+        },
+        {
+            "id":3,
+            "title": "Single components",
+            "body": "Single components are interactions that enable two",
+            "_graphic": {
+                "src": "course/en/images/labelGenerator_CS1_CS3_4911_003/narrative_3.png",
+                "alt": "Label generator pop-up pin. Select here to open."
+            },
+            "strapline":"Single components",
+            "_hasExtraDescription":false,
+            "_similarItemIdForPopup":0,
+            "_itemTop": 40,
+            "_itemLeft": 49,
+            "_popupPosition":"right",
+            "_highlightTop":1,
+            "_highlightLeft":3,
+            "_highlightWidth":5,
+            "_highlightHeight":7
+        },
+        {
+            "id":4,
+            "title": "APU Drains",
+            "body": "Single components are interactions that enable two",
+            "_graphic": {
+                "src": "course/en/images/labelGenerator_CS1_CS3_4911_003/narrative_4.png",
+                "alt": "Label generator pop-up pin. Select here to open."
+            },
+            "strapline":"APU Drains",
+            "_hasExtraDescription":true,
+            "_similarItemIdForPopup":0,
+            "_itemTop": 27,
+            "_itemLeft": 18,
+            "_popupPosition":"right",
+            "_highlightTop":0,
+            "_highlightLeft":0,
+            "_highlightWidth":0,
+            "_highlightHeight":0
+        }
+    ],
+    "_showPopupText":"Show All",
+    "_hidePopupText":"Hide All",
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}
